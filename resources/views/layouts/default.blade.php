@@ -11,6 +11,9 @@
         <link rel="icon" href="img/favicon.ico">
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" href="http://t4t5.github.io/sweetalert/dist/sweetalert.css">
         <title>@yield('pageTitle')</title>
     </head>
     <body>

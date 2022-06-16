@@ -29,9 +29,15 @@
                 <td>{{$comic->type}}</td>
                 <td>{{$comic->price}}</td>
                 <td>{{$comic->series}}</td>
-                <td><a href="{{route('comics.show', $comic->id)}}" class="btn btn-info">Visualizza</a></td>
-                <td><a href="" class="btn btn-warning">Modifica</a></td>
-                <td><a href="" class="btn btn-danger">Cancella</a></td>
+                <td><a href="{{route('comics.show', $comic->id)}}" class="btn btn-info ">Visualizza</a></td>
+                <td><a href="{{route('comics.edit', $comic->id)}}" class="btn btn-warning">Modifica</a></td>
+                <td>
+                  <form action="{{route('comics.destroy', $comic->id)}}" method="post">
+                  @csrf
+                  @method('DELETE')
+                  <button onclick="return confirm('Sei sicuro di voler cancellare?')" type='submit' class="btn btn-danger">Cancella</button>
+                  </form>
+                </td>
                 </tr>
                 
             @endforeach
@@ -40,5 +46,8 @@
       </table>
 </div>
 </main>
+
+
+
 @endsection
     
